@@ -4,6 +4,8 @@ Tests latency of several hosts and chooses the one with the lowest latency.
 Discards any that fail to resolve in DNS or respond to ping (If results not equal to null).
 Then sorts by response time and selects that host into a varible which can then be used.
 
+I wrote this my self based on searching for exampels. ChatGPT writes a much better and neater version if asked using a simple prompt. 
+
 #>
 
 $FinalResult = @()
