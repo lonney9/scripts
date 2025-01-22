@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# test_ping.sh
-
-# Ping a list of IP addresses to see if they are up or down
-
-# Quickly generate a list of IPs from a CIDR using nmap, eg:
-# nmap -sL -n 192.168.56.0/22 | awk '/Nmap scan report/{print $NF}' > ip_list.txt
-
 # Set the default IP list file name
 default_ip_list="ip_list.txt"
 
