@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Uses netcat (nc) since some firewalls/hosts drop nmap probes
+
+# Quickly generate a list of IPs from a CIDR using nmap, eg:
+# nmap -sL -n 192.168.56.0/22 | awk '/Nmap scan report/{print $NF}' > ip_list.txt
+
 # Set the default IP list file name
 default_ip_list="ip_list.txt"
 
@@ -33,7 +38,7 @@ date
 
 # Read IP addresses from the file and test SSH connectivity
 while read -r ip; do
-    if nc -z $timeout_switch $ssh_timeout "$ip" 22 >/dev/null 2>&1; then
+    if nc -z "$timeout_switch $ssh_timeout" "$ip" 22 >/dev/null 2>&1; then
         echo "$ip ssh open"
     else
         echo "$ip ssh closed"

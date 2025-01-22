@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Ping a list of IP addresses to see if they are up or down
+
+# Quickly generate a list of IPs from a CIDR using nmap, eg:
+# nmap -sL -n 192.168.56.0/22 | awk '/Nmap scan report/{print $NF}' > ip_list.txt
+
 # Set the default IP list file name
 default_ip_list="ip_list.txt"
 
@@ -24,7 +29,7 @@ date
 
 # Read IP addresses from the file and ping each one
 while read -r ip; do
-    if ping -c 1 -W $ping_timeout "$ip" >/dev/null 2>&1; then
+    if ping -c 1 -W "$ping_timeout" "$ip" >/dev/null 2>&1; then
         echo "$ip is up"
     else
         echo "$ip is down"
