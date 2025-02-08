@@ -6,7 +6,7 @@ See the accompanying text file(s), or comments with-in the script.
 
 ## IRLP Scripts
 
-IRLP scripts have moved back to IRLPScripts repo.
+IRLP scripts have moved back to [IRLPScripts](https://github.com/lonney9/IRLPScripts) repo.
 
 ## Note
 
