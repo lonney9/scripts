@@ -4,6 +4,10 @@ Various Shell Scripts.
 
 See the accompanying text file(s), or comments with-in the script.
 
+## IRLP Scripts
+
+IRLP scripts have moved back to IRLPScripts repo.
+
 ## Note
 
 Work in progress to tidy and better organize various scripts.
