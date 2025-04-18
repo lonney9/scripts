@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Written mostly with ChatGPT prompts 18-Apr-2025
 # Pings a set of hosts
 # Displays results 
 # Refreshes every 10 seconds or [space] to update now
